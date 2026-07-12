@@ -8,7 +8,7 @@ public abstract class Event extends BaseModel<Long>{
     private String title;
     private String location;
     private int capacity;
-    private int capacityCount;
+    private int reservationCount;
     private BigDecimal ticketPrice;
     private EventStatus status;
 
@@ -16,7 +16,7 @@ public abstract class Event extends BaseModel<Long>{
         this.title = title;
         this.location = location;
         this.capacity = capacity;
-        this.capacityCount = capacityCount;
+        this.reservationCount = capacityCount;
         this.ticketPrice = ticketPrice;
         this.status = status;
     }
@@ -26,7 +26,7 @@ public abstract class Event extends BaseModel<Long>{
         this.title = title;
         this.location = location;
         this.capacity = capacity;
-        this.capacityCount = capacityCount;
+        this.reservationCount = capacityCount;
         this.ticketPrice = ticketPrice;
         this.status = status;
     }
@@ -55,12 +55,12 @@ public abstract class Event extends BaseModel<Long>{
         this.capacity = capacity;
     }
 
-    public int getCapacityCount() {
-        return capacityCount;
+    public int getReservationCount() {
+        return reservationCount;
     }
 
-    public void setCapacityCount(int capacityCount) {
-        this.capacityCount = capacityCount;
+    public void setReservationCount(int reservationCount) {
+        this.reservationCount = reservationCount;
     }
 
     public BigDecimal getTicketPrice() {
@@ -85,7 +85,7 @@ public abstract class Event extends BaseModel<Long>{
                 "title='" + title + '\'' +
                 ", location='" + location + '\'' +
                 ", capacity=" + capacity +
-                ", capacityCount=" + capacityCount +
+                ", capacityCount=" + reservationCount +
                 ", ticketPrice=" + ticketPrice +
                 ", status=" + status +
                 '}';
