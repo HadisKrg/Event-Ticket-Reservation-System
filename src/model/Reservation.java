@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Reservation extends BaseModel<Long> {
     private String customerName;
-    private String getCustomerPhone;
+    private String customerPhone;
     private int eventId;
     private int ticketCount;
     private Date reservationDate;
@@ -15,7 +15,7 @@ public class Reservation extends BaseModel<Long> {
     public Reservation(Long id,String customerName, String getCustomerPhone, int eventId, int ticketCount, Date reservationDate, ReservationStatus status) {
         setId(id);
         this.customerName = customerName;
-        this.getCustomerPhone = getCustomerPhone;
+        this.customerPhone = getCustomerPhone;
         this.eventId = eventId;
         this.ticketCount = ticketCount;
         this.reservationDate = reservationDate;
@@ -30,12 +30,12 @@ public class Reservation extends BaseModel<Long> {
         this.customerName = customerName;
     }
 
-    public String getGetCustomerPhone() {
-        return getCustomerPhone;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setGetCustomerPhone(String getCustomerPhone) {
-        this.getCustomerPhone = getCustomerPhone;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
     public int getEventId() {
@@ -74,7 +74,7 @@ public class Reservation extends BaseModel<Long> {
     public String toString() {
         return "Reservation{" +
                 "customerName='" + customerName + '\'' +
-                ", getCustomerPhone='" + getCustomerPhone + '\'' +
+                ", getCustomerPhone='" + customerPhone + '\'' +
                 ", eventId=" + eventId +
                 ", ticketCount=" + ticketCount +
                 ", reservationDate=" + reservationDate +
