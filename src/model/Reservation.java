@@ -22,6 +22,16 @@ public class Reservation extends BaseModel<Long> {
         this.status = status;
     }
 
+    public Reservation(String customerName, String customerPhone, int eventId, int ticketCount, Date reservationDate, ReservationStatus status) {
+        this.customerName = customerName;
+        this.customerPhone = customerPhone;
+        this.eventId = eventId;
+        this.ticketCount = ticketCount;
+        this.reservationDate = reservationDate;
+        this.status = status;
+    }
+
+
     public String getCustomerName() {
         return customerName;
     }
