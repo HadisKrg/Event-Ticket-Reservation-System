@@ -13,7 +13,7 @@ public class DatabaseConfig {
 
     public static Connection getConnection(){
         try {
-            return DriverManager.getConnection(url,url,password);
+            return DriverManager.getConnection(url,user,password);
         }
         catch (SQLException e){
             throw new DatabaseException("Connection failed",e);
