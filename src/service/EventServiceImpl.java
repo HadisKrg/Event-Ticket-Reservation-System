@@ -37,6 +37,6 @@ public class EventServiceImpl implements EventService{
     @Override
     public void cancel(Event event) {
         event.setStatus(EventStatus.CANCELLED);
-        eventRepository.update(event);
+        eventRepository.delete(event.getId());
     }
 }
