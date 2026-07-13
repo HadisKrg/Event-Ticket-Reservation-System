@@ -73,6 +73,7 @@ public class Reservation extends BaseModel<Long> {
     @Override
     public String toString() {
         return "Reservation{" +
+                "id='" + getId()+ '\''+
                 "customerName='" + customerName + '\'' +
                 ", getCustomerPhone='" + customerPhone + '\'' +
                 ", eventId=" + eventId +

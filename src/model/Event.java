@@ -4,7 +4,7 @@ import enums.EventStatus;
 
 import java.math.BigDecimal;
 
-public abstract class Event extends BaseModel<Long>{
+public class Event extends BaseModel<Long>{
     private String title;
     private String location;
     private int capacity;
@@ -82,10 +82,11 @@ public abstract class Event extends BaseModel<Long>{
     @Override
     public String toString() {
         return "Event{" +
+                "id='" + getId()+ '\''+
                 "title='" + title + '\'' +
                 ", location='" + location + '\'' +
                 ", capacity=" + capacity +
-                ", capacityCount=" + reservationCount +
+                ", reservationCount=" + reservationCount +
                 ", ticketPrice=" + ticketPrice +
                 ", status=" + status +
                 '}';
