@@ -2,17 +2,18 @@ package model;
 
 import enums.ReservationStatus;
 
-import java.util.Date;
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class Reservation extends BaseModel<Long> {
     private String customerName;
     private String customerPhone;
     private int eventId;
     private int ticketCount;
-    private Date reservationDate;
+    private LocalDate reservationDate;
     private ReservationStatus status;
 
-    public Reservation(Long id,String customerName, String getCustomerPhone, int eventId, int ticketCount, Date reservationDate, ReservationStatus status) {
+    public Reservation(Long id,String customerName, String getCustomerPhone, int eventId, int ticketCount, LocalDate reservationDate, ReservationStatus status) {
         setId(id);
         this.customerName = customerName;
         this.customerPhone = getCustomerPhone;
@@ -22,7 +23,7 @@ public class Reservation extends BaseModel<Long> {
         this.status = status;
     }
 
-    public Reservation(String customerName, String customerPhone, int eventId, int ticketCount, Date reservationDate, ReservationStatus status) {
+    public Reservation(String customerName, String customerPhone, int eventId, int ticketCount, LocalDate reservationDate, ReservationStatus status) {
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.eventId = eventId;
@@ -30,7 +31,6 @@ public class Reservation extends BaseModel<Long> {
         this.reservationDate = reservationDate;
         this.status = status;
     }
-
 
     public String getCustomerName() {
         return customerName;
@@ -64,11 +64,11 @@ public class Reservation extends BaseModel<Long> {
         this.ticketCount = ticketCount;
     }
 
-    public Date getReservationDate() {
+    public LocalDate getReservationDate() {
         return reservationDate;
     }
 
-    public void setReservationDate(Date reservationDate) {
+    public void setReservationDate(LocalDate reservationDate) {
         this.reservationDate = reservationDate;
     }
 
