@@ -1,6 +1,6 @@
 package model;
 
-public class BaseModel <ID> {
+public abstract class BaseModel <ID> {
     private ID id;
 
     public ID getId() {
